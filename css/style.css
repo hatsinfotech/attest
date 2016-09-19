@@ -1,4 +1,4 @@
-.login-form-container{
+login-form-container{
     display: table;
     position: absolute;
     height: 100%;
@@ -15,9 +15,4 @@
 }
 .login-form h4{
     text-align: center;
-}
-
-theme-btn{
-    background-color: steelblue;
-    color: white;
 }

@@ -1,0 +1,38 @@
+<div class="teamform" class="container">
+    <button class="btn btn-primary">ADD NEW BATCH</button>
+    <div class="playersInfo"> 
+            <table class="table table-striped">
+                <thead>
+                    <th>File ID</th>
+                    <th>File Name</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Remarks</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat= 'file in currentFiles'>
+                        <td><input type="text" ng-model = 'file.id' class="form-control file-id-input"></td>
+                        
+                        <td><input type="text" ng-model = 'file.name' class="form-control file-name-input"></td>
+                        
+                        <td><input type="number" ng-model = 'file.duedate' class="form-control due-date-input" ></td>
+                        
+                        <td><input type="checkbox" class="form-control"></td>
+                        <td><input type="checkbox" class="form-control"></td>
+                        <td><input type="checkbox" class="form-control"></td>
+                        
+                        <td>
+                            <select class="form-control" class='consulate-type-select' ng-model = 'file.consulateType'>
+                            <option>None</option>
+                            <option>UAE Consulate(Mumbai)</option>
+                            <option>UAE Consulate(Delhi)</option>
+                            <option> Saudi Consulate(Delhi)</option>
+                        
+                            </select>
+                        </td>
+                        <td><input type="number" ng-model = 'file.remarks' class="form-control remarks-input"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>

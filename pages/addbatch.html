@@ -1,0 +1,48 @@
+<div class="addbatch-form-container">
+    
+    <form class="addbatch-form">
+        
+        <div class="add-batch-table-wrp"> 
+            <h3>ADD FILE <span class="glyphicon glyphicon-plus-sign" ng-click= 'addBatchRow()'></span></h3>
+            <table class="table table-striped">
+                <thead>
+                    <th>File ID</th>
+                    <th>File Name</th>
+                    <th>Due Date</th>
+                    <th>Notary Attestation</th>
+                    <th>MHA Attestation</th>
+                    <th>MEA Attestation</th>
+                    <th>Consulate Attestation</th>
+                    <th>Remarks</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat= 'file in files'>
+                        <td><input type="text" ng-model = 'file.id' class="form-control file-id-input"></td>
+                        
+                        <td><input type="text" ng-model = 'file.name' class="form-control file-name-input"></td>
+                        
+                        <td><input type="date" ng-model = 'file.duedate' class="form-control due-date-input" ></td>
+                        
+                        <td><input type="checkbox" class="form-control" ng-checked="file.notary" ng-disabled="file.notary"></td>
+                        <td><input type="checkbox" class="form-control" ng-checked="file.notary" ng-disabled="file.notary"></td>
+                        <td><input type="checkbox" class="form-control"></td>
+                        
+                        <td>
+                            <select class="form-control consulate-type-select" ng-model = 'file.consulateType'>
+                            <option>None</option>
+                            <option>UAE Consulate(Mumbai)</option>
+                            <option>UAE Consulate(Delhi)</option>
+                            <option> Saudi Consulate(Delhi)</option>
+                        
+                            </select>
+                        </td>
+                        <td><textarea class="form-control" ng-model="remarks"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
